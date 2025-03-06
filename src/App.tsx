@@ -199,9 +199,9 @@ function App() {
             </div>
           )}
 
-          <div className="flex-1 max-w-7xl mx-auto px-6 py-4">
+          <div className="flex-1 max-w-7xl mx-auto px-2 py-4">
             <div className="mb-4 flex justify-between items-center mb-8">
-              <h1 className="text-2xl font-bold text-[#0029FF] mx-4 text-center">
+              <h1 className="text-2xl font-bold text-[#0029FF] mx-6 text-center">
                 Technical Project Management
               </h1>
               <button className="bg-[#0029FF] text-white text-xs rounded-xl px-3 p-3 flex items-center mx-16 ">
@@ -209,7 +209,7 @@ function App() {
               </button>
             </div>
 
-            <div className="bg-[#E9ECEF] p-6 rounded-lg mb-6 mx-4 mb-12 mr-16">
+            <div className="bg-[#E9ECEF] p-6 rounded-lg mb-6 mx-6 mb-14 mr-16">
               <h2 className="text-xl font-bold mb-2">
                 Explore the world of management
               </h2>
