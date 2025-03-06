@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import {
   Info,
   X,
-  MessageSquare,
-  Share2,
-  HelpCircle,
   Download,
   Plus,
   Lightbulb,
   MessageCircle,
-  AlertCircle,
+  MailQuestion,
   ArrowRight,
+  Bell,
+  Home,
+  Eye,
+  Wrench,
+  Sprout,
 } from "lucide-react";
 import img from "./img/image 13.png";
 
@@ -69,7 +71,7 @@ function App() {
             asset_title: "Technical Project Management",
             asset_description:
               "Story of Alignment\r\nScope of Agility\r\nSpecific Accountable \r\nStaggering Approach\r\n\r\n",
-            asset_content: " https://www.youtube.com/embed/TiMRwri1xJ8",
+            asset_content: "https://www.youtube.com/embed/TiMRwri1xJ8",
             asset_type: "display_asset",
             asset_content_type: "video",
           },
@@ -96,7 +98,7 @@ function App() {
             asset_title: "4SA Method",
             asset_description: "To explore more read more",
             asset_content:
-              " https://dtthon.deepthought.education/sharer?id=01aa3cff-db8e-8d9d-afc0-1671715937878",
+              "https://dtthon.deepthought.education/sharer?id=01aa3cff-db8e-8d9d-afc0-1671715937878",
             asset_type: "display_asset",
             asset_content_type: "article",
           },
@@ -125,16 +127,16 @@ function App() {
         </div>
         <div className="flex items-center space-x-2 toggle-btn">
           <button className="p-1 rounded-full bg-blue-100 text-[#0029FF] hover:bg-blue-200">
-            <MessageSquare size={20} />
+            <Home size={20} />
           </button>
           <button className="p-1 rounded-full bg-blue-100 text-[#0029FF] hover:bg-blue-200">
-            <Share2 size={20} />
+            <Eye size={20} />
           </button>
           <button className="p-1 rounded-full bg-blue-100 text-[#0029FF] hover:bg-blue-200">
-            <HelpCircle size={20} />
+            <Wrench size={20} />
           </button>
           <button className="p-1 rounded-full bg-blue-100 text-[#0029FF] hover:bg-blue-200">
-            <Download size={20} />
+            <Bell size={20} />
           </button>
           <div className="w-8 h-8 bg-gray-300 rounded-full"></div>
           <button className="p-1 text-gray-500">
@@ -225,7 +227,7 @@ function App() {
               <div className="bg-white rounded-xl overflow-hidden shadow-md">
                 <div className="bg-black text-white p-3 flex justify-between items-center">
                   <div>Technical Project Management</div>
-                  <div className=" text-white rounded-full ">
+                  <div className=" text-white rounded-full cursor-pointer">
                     <Info size={18} />
                   </div>
                 </div>
@@ -241,7 +243,7 @@ function App() {
               <div className="bg-white rounded-xl shadow-md overflow-hidden">
                 <div className="bg-black text-white p-3 flex justify-between items-center">
                   <div>Threadbuild</div>
-                  <button className="text-white rounded-full">
+                  <button className="text-white rounded-full cursor-pointer">
                     <Info size={18} />
                   </button>
                 </div>
@@ -289,27 +291,27 @@ function App() {
                       </div>
                     </div>
 
-                    <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center justify-between mb-4 ml-28">
                       <div className="flex space-x-2">
                         <button className="p-1 text-gray-500 hover:text-gray-700">
-                          <Lightbulb size={16} />
+                          <Lightbulb size={20} />
                         </button>
                         <button className="p-1 text-gray-500 hover:text-gray-700">
-                          <MessageCircle size={16} />
+                          <MessageCircle size={20} />
                         </button>
                         <button className="p-1 text-gray-500 hover:text-gray-700">
-                          <AlertCircle size={16} />
+                          <MailQuestion size={20} />
                         </button>
                         <button className="p-1 text-gray-500 hover:text-gray-700">
-                          <Download size={16} />
+                          <Sprout size={20} />
                         </button>
                       </div>
                       <div className="flex space-x-2">
                         <select className="text-xs border border-gray-200 rounded-md p-1 shadow-md">
-                          <option>Select Canvas</option>
+                          <option>Select Category</option>
                         </select>
                         <select className="text-xs border border-gray-200 rounded-md p-1 shadow-md">
-                          <option>Select Photos</option>
+                          <option>Select Process</option>
                         </select>
                       </div>
                     </div>
@@ -351,6 +353,10 @@ function App() {
                             </div>
                           </div>
                           <img src={asset.asset_content} className="w-full" />
+                          <video
+                            src={asset.asset_content}
+                            className="w-full"
+                          ></video>
                         </div>
                       ))}
                     </div>
