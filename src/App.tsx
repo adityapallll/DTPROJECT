@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {
-  Menu,
+  Info,
   X,
   MessageSquare,
   Share2,
@@ -10,6 +10,7 @@ import {
   Lightbulb,
   MessageCircle,
   AlertCircle,
+  ArrowRight,
 } from "lucide-react";
 import img from "./img/image 13.png";
 
@@ -158,23 +159,49 @@ function App() {
 
       <div className="flex flex-1 relative">
         <div className="flex flex-1">
-          <button
-            onClick={toggleSidebar}
-            className="mr-4 p-1 rounded-full hover:bg-gray-100 h-28"
-          >
-            {sidebarOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
-          {sidebarOpen && (
-            <div className="bg-white rounded-xl overflow-hidden shadow-md">
+          {sidebarOpen ? (
+            <div className="bg-white rounded-xl overflow-hidden shadow-md h-1/4">
               <div className="bg-black text-white p-3 flex justify-between items-center">
-                <div>Technical Project Management</div>
+                <div className="mr-20 text-xs">Journey Board</div>
+                <button
+                  onClick={toggleSidebar}
+                  className=" rounded-full hover:bg-gray-100"
+                >
+                  {sidebarOpen ? (
+                    <X size={20} />
+                  ) : (
+                    <ArrowRight
+                      size={20}
+                      className="bg-white rounded-full text-black"
+                    />
+                  )}
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div className="bg-white rounded-xl overflow-hidden shadow-md sidebartool">
+              <div className="bg-black text-white p-3 flex justify-between items-center">
+                <div className="mr-20 text-xs">Journey Board</div>
+                <button
+                  onClick={toggleSidebar}
+                  className="ml-4 p-1 rounded-full hover:bg-gray-100"
+                >
+                  {sidebarOpen ? (
+                    <X size={20} />
+                  ) : (
+                    <ArrowRight
+                      size={20}
+                      className="bg-white rounded-full text-black"
+                    />
+                  )}
+                </button>
               </div>
             </div>
           )}
 
           <div className="flex-1 max-w-7xl mx-auto px-6 py-4">
             <div className="mb-4 flex justify-between items-center mb-8">
-              <h1 className="text-2xl font-bold text-[#0029FF] mx-16">
+              <h1 className="text-2xl font-bold text-[#0029FF] mx-4 text-center">
                 Technical Project Management
               </h1>
               <button className="bg-[#0029FF] text-white text-xs rounded-xl px-3 p-3 flex items-center mx-16 ">
@@ -182,7 +209,7 @@ function App() {
               </button>
             </div>
 
-            <div className="bg-[#E9ECEF] p-6 rounded-lg mb-6 mx-16 mb-12">
+            <div className="bg-[#E9ECEF] p-6 rounded-lg mb-6 mx-4 mb-12 mr-16">
               <h2 className="text-xl font-bold mb-2">
                 Explore the world of management
               </h2>
@@ -194,12 +221,12 @@ function App() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-14 mx-20 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-14 mx-8 mr-16 ">
               <div className="bg-white rounded-xl overflow-hidden shadow-md">
                 <div className="bg-black text-white p-3 flex justify-between items-center">
                   <div>Technical Project Management</div>
-                  <div className="bg-white text-black rounded-full p-1">
-                    <HelpCircle size={16} />
+                  <div className=" text-white rounded-full ">
+                    <Info size={18} />
                   </div>
                 </div>
                 <div className="p-4">
@@ -214,8 +241,8 @@ function App() {
               <div className="bg-white rounded-xl shadow-md overflow-hidden">
                 <div className="bg-black text-white p-3 flex justify-between items-center">
                   <div>Threadbuild</div>
-                  <button className="bg-white text-black rounded-full p-1">
-                    <HelpCircle size={16} />
+                  <button className="text-white rounded-full">
+                    <Info size={18} />
                   </button>
                 </div>
                 <div className="p-4">
@@ -313,9 +340,9 @@ function App() {
                         <div className="bg-white rounded-xl overflow-hidden shadow-md mb-10">
                           <div className="bg-black text-white p-3 flex justify-between items-center">
                             <div>{asset.asset_title}</div>
-                            <div className="bg-white text-black rounded-full p-1">
-                              <HelpCircle size={16} />
-                            </div>
+                            <button className="text-white rounded-full">
+                              <Info size={18} />
+                            </button>
                           </div>
                           <div className="p-4">
                             <div className="mb-4 text-base">
@@ -334,11 +361,12 @@ function App() {
           </div>
         </div>
 
-        <div className="fixed right-0 top-1/4 bg-black text-white p-2 rounded-l-md flex flex-col items-center">
+        <div className="fixed right-0 top-20 bg-black text-white p-2 rounded-l-md flex flex-col items-center">
+          <X size={18} className="mb-5" />
           <div className="writing-vertical mb-4 text-xs tracking-wider">
-            NOTIFICATION
+            NOTICE
           </div>
-          <div className="writing-vertical text-xs tracking-wider">BOARD</div>
+          <div className="writing-vertical text-xs">BOARD</div>
         </div>
       </div>
     </div>
