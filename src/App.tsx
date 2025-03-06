@@ -221,7 +221,7 @@ function App() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-14 mx-8 mr-16 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mx-8 mr-16 mt-16 ">
               <div className="bg-white rounded-xl overflow-hidden shadow-md">
                 <div className="bg-black text-white p-3 flex justify-between items-center">
                   <div>Technical Project Management</div>
